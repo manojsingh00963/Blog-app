@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import appwriteService from "../appwrite/config";
-import {Container, PostCard} from '../components'
+import { Container, PostCard } from '../components'
+import { Blocks } from 'react-loader-spinner';
 
 function Home() {
     const [posts, setPosts] = useState([])
@@ -12,7 +13,7 @@ function Home() {
             }
         })
     }, [])
-  
+
     if (posts.length === 0) {
         return (
             <div className="w-full py-8 mt-4 text-center">
@@ -20,7 +21,15 @@ function Home() {
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
                             <h1 className="text-2xl font-bold hover:text-gray-500">
-                                Login to read posts
+                                <Blocks
+                                    height="80"
+                                    width="80"
+                                    color="#4fa94d"
+                                    ariaLabel="blocks-loading"
+                                    wrapperStyle={{}}
+                                    wrapperClass="blocks-wrapper"
+                                    visible={true}
+                                />
                             </h1>
                         </div>
                     </div>
