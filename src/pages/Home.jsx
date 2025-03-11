@@ -76,7 +76,7 @@ function Home() {
 
         {/* Title */}
         <h1 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-            Let's Write Your Own Blog.
+            Let&apos;s Write Your Own Blog.
         </h1>
 
         {/* Subtitle */}
